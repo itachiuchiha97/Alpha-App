@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Signin Template · Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="./css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" media="all">
+
+<script>
+
+    var objPeople = [
+
+      {
+          username:"Sahil",
+          password:"Bhatia"
+      },
+      {
+          username:"Divye",
+          password:"Bhutani",
+      },                
+      {
+          username:"Adhiraj",
+          password:"Singh"
+      }]
+
+  function validateUser() {
+      var user = document.getElementById("uname")
+      var pass = document.getElementById("pass")
+      var i=0
+      console.log("here")
+
+      if (pass.value.length >= 4 && user.value!=""){
+          for(i=0; i<objPeople.length; i++){
+            if(user.value == objPeople[i].username && pass.value==objPeople[i].password){
+              console.log('logged in')
+              return true
+            }
+            else {
+              console.log('incorrect username/password')
+              return false
+            }
+          }
+        }
+    }
+          
+</script>
+
+<link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body class="text-center">
+
+    <form id="myForm" class="form-signin" onsubmit="return validateUser()">
+      
+      <!-- to display role ahead of login -->
+      <h1 class="h3 mb-3 font-weight-normal"><span id="result"></span> Login </h1>
+      <script>
+          document.getElementById("result").innerHTML=localStorage.getItem("textvalue")
+      </script>
+      <input type="text" id="uname" class="form-control" placeholder="Username" required autofocus>
+      <input type="password" id="pass" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
+      <link rel="stylesheet"  href="./css/signin.css" media="all">
+
+</form>
+</body>
+</html>

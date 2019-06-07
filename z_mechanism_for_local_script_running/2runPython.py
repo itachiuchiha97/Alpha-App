@@ -1,0 +1,1 @@
+execfile('/home/ssb/Desktop/capella/public/scripts/tamatar.py')

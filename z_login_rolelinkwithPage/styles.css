@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0;
+    width: 1000px;
+    height: 1000px;
+    background-image: url(./img/background-red.jpg);
+}
+
+.img-guest{
+    max-width: 165px;
+    max-height: 165px;
+}
+
+.img-admin{
+    max-width: 165px;
+    max-height: 165px;
+}
+
+.img-employee{
+    max-width: 165px;
+    max-height: 165px;
+}

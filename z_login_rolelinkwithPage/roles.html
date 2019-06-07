@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Role Selection</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- using localStorage for passing values -->
+    <script>
+        function passvalue_Guest(){
+            var guest = "Guest"
+            localStorage.setItem("textvalue",guest)
+        } 
+
+        function passvalue_Admin(){
+            var admin = "Admin"
+            localStorage.setItem("textvalue",admin)
+        } 
+
+        function passvalue_Employee(){
+            var employee = "Employee"
+            localStorage.setItem("textvalue",employee)
+            
+        } 
+    </script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- onclick is put up on <a> tag -->
+            <a rel="text" href="login.html" onclick="passvalue_Guest()">
+                <img class="img-guest" src="./img/guest_user.png" alt="guest">
+            </a>
+            <a rel="text" href="login.html">
+                    <img class="img-admin" src="./img/admin_user.png" alt="admin" onclick="passvalue_Admin()">
+                </a>
+            <a rel="text" href="login.html" >
+                    <img class="img-employee" src="./img/employee_user.png" alt="employee" onclick="passvalue_Employee()">
+             </a>
+    </div>
+    
+</body>
+</html>
